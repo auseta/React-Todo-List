@@ -162,7 +162,7 @@ form > div > button {
   color: red;
 }
 
-.fa-edit {
+.fa-edit, .fa-check-circle {
   color: green;
 }
 
