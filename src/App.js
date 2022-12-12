@@ -51,8 +51,15 @@ class App extends Component {
 
   editEnabled(e) {
     const inputLi = e.target.previousSibling.previousSibling
-    inputLi.removeAttribute('disabled')
-    inputLi.focus()
+    const icon = e.target
+    if (icon.className === 'fas fa-edit') {
+      icon.className = 'fas fa-check-circle'
+      inputLi.removeAttribute('disabled')
+      inputLi.focus()
+    } else {
+      icon.className = 'fas fa-edit'
+      inputLi.setAttribute('disabled', true)
+    }
   }
 
   editDisabled(e) {
